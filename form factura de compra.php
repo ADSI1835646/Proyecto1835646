@@ -41,7 +41,7 @@
                 </div>
                 <div>
                   <label for="clienteCrearFactura">Proveedor</label>
-                  <input type="search" name="clienteCrearFactura" id="ClienteCrearFactura" class="tamanioUno" list="listaProveedores">
+                  <input type="search" name="clienteCrearFactura" id="ClienteCrearFactura" class="tamanioUno" list="listaProveedores" placeholder="Seleccione un proveedor">
                   <datalist id="listaProveedores">
                     <?php
                       $consultaProveedores = "SELECT * from tbproveedores";
@@ -69,7 +69,7 @@
               <div class="seccion">
                 <div>
                   <label for="fromArticulo">Articulo</label>
-                  <input type="search" name="fromArticulo" id="fromArticulo" class="tamanioUno" list="listaArticulos">
+                  <input type="search" name="fromArticulo" id="fromArticulo" class="tamanioUno" list="listaArticulos" placeholder="Seleccione un articulo">
                   <datalist id="listaArticulos">
                     <?php
                       $consultaProveedores = "SELECT * from tbarticulos";
