@@ -19,7 +19,7 @@ function agregarProducto() {
   </tr>`;
 
   calcularTotales();
-  limpiarCampos();
+  // limpiarCampos();
 }
 
 function calcularTotales() {
