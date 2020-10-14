@@ -25,7 +25,7 @@ function agregarProducto() {
 function calcularTotales() {
   var subtotales = document.getElementsByName("subtotal");
   var dto = document.getElementById("descuentoCrearFactura");
-  var ivaaa = document.getElementById("impuestoCrearFactura");
+  var ivaaa = 0.19;
   var sumaSubtotales = 0;
   
   for (var i = 0; i < subtotales.length; i++) {
@@ -34,7 +34,7 @@ function calcularTotales() {
   
   var valorDto = sumaSubtotales * (Number(dto.value)/100);
   var subtotalll = sumaSubtotales - valorDto;
-  var valorIva = subtotalll * Number(ivaaa.value);
+  var valorIva = subtotalll * ivaaa;
   var totalFactura = subtotalll + valorIva;
 
   descuento.value = valorDto.toLocaleString("es-MX");

@@ -116,19 +116,19 @@
             <div id="seccion2TotalesCrearFactura">
               <div>
                 <label for="descuento">Descuento</label>
-                <input type="text" name="descuento" id="descuento" disabled>
+                <input type="text" name="descuento" id="descuento" readonly>
               </div>
               <div>
                 <label for="subtotal">Subtotal</label>
-                <input type="text" name="subtotal" id="subtotal" disabled>
+                <input type="text" name="subtotal" id="subtotal" readonly>
               </div>
               <div>
                 <label for="iva">Iva</label>
-                <input type="text" name="iva" id="iva" disabled>
+                <input type="text" name="iva" id="iva" readonly>
               </div>
               <div>
                 <label for="total" class="labelTotal">Total</label>
-                <input type="text" name="total" id="total" disabled>
+                <input type="text" name="total" id="total" readonly>
               </div>
             </div>
           </div>
