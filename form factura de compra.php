@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+
+  <?php
+    $conexion = mysqli_connect('localhost', 'root', '', 'sifprueba') or die ("Error al conectar con la base de datos");
+  ?>
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,12 +41,21 @@
                 </div>
                 <div>
                   <label for="clienteCrearFactura">Proveedor</label>
-                  <select name="clienteCrearFactura" id="clienteCrearFactura" class="tamanioUno">
-                    <option value="">Seleccione un cliente</option>
-                    <option value="">Cliente 1</option>
-                    <option value="">Cliente 2</option>
-                    <option value="">Cliente 3</option>
-                  </select>
+                  <input type="search" name="clienteCrearFactura" id="ClienteCrearFactura" class="tamanioUno" list="listaProveedores">
+                  <datalist id="listaProveedores">
+                    <?php
+                      $consultaProveedores = "SELECT * from tbproveedores";
+                      $resultado = mysqli_query($conexion, $consultaProveedores);
+                      
+
+                      while($fila = mysqli_fetch_array($resultado)) {
+                        
+                        ?>
+                          <option value="<?php echo $fila["Nombre"]; ?>"><?php echo $fila["Nombre"]; ?></option>
+                        <?php
+                      }
+                    ?>
+                  </datalist>
                 </div>
                 <div>
                   <label for="descuentoCrearFactura">Descuento</label>
@@ -55,15 +69,21 @@
               <div class="seccion">
                 <div>
                   <label for="fromArticulo">Articulo</label>
-                  <select name="fromArticulo" id="fromArticulo" class="tamanioUno">
-                    <option value="Seleccione">Seleccione</option>
-                    <option value="Cemento">Cemento</option>
-                    <option value="Ladrillo">Ladrillo</option>
-                    <option value="Varilla">Varilla</option>
-                    <option value="Alambre">Alambre</option>
-                    <option value="Baldosa">Baldosa</option>
-                    <option value="Pegante">Pegante</option>
-                  </select>
+                  <input type="search" name="fromArticulo" id="fromArticulo" class="tamanioUno" list="listaArticulos">
+                  <datalist id="listaArticulos">
+                    <?php
+                      $consultaProveedores = "SELECT * from tbarticulos";
+                      $resultado = mysqli_query($conexion, $consultaProveedores);
+                      
+
+                      while($fila = mysqli_fetch_array($resultado)) {
+                        
+                        ?>
+                          <option value="<?php echo $fila["Nombre"]; ?>"><?php echo $fila["Nombre"]; ?></option>
+                        <?php
+                      }
+                    ?>
+                  </datalist>
                 </div>
                 
                 <div>
