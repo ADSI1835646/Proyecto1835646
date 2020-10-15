@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proveedor</title>
+    <title>Crear Sucursal</title>
     <link rel="icon" type="image" href="img/general/favicon.png">
-    <link rel="stylesheet" href="css/proveedor.css">
+    <link rel="stylesheet" href="css/crear sucursal.css">
   </head>
   <body>
     <div class="contenedor">
@@ -25,7 +25,7 @@
                   <figure id="figAvatar">
                     <img id="avatar" src="img/general/avatar.png" alt="avatar" />
                   </figure>
-                  <p>Bodega</p>
+                  <p>Empresa</p>
                   <a href="../0 inicio de sesion/index.html">
                   <input type="button" value="Cerrar sesion"></a>
                 </div>
@@ -33,10 +33,10 @@
             </div>
             <nav id="nav1">
               <ul>
-                <li><a href="inventario.php">Gestion de Inventario</a></li>
-                <li><a href="proveedor.html">Gestion de proveedores</a></li>
-                <li><a href="factura de compra.html">Factura de compra</a></li>
-                <li><a href="alertas.html">Alertas</a></li>
+                <li><a href="crear usuario.html">Crear Usuarios</a></li>
+                <li><a href="crear sucursal.html">Crea Sucursales</a></li>
+                <li><a href="crear bodegas.html">Crear Bodegas</a></li>
+                <li><a href="crear sucursal-bodegas.html">Asignar Bodegas</a></li>
               </ul>
             </nav>
           </div>
@@ -45,158 +45,127 @@
       </div>
       <!-- CREAR CLIENTE -->
       <form action="" class="formCliente">
-        <h2 class="clienteH2">Proveedor</h2>  
-        <h3>Datos del Proveedor</h3> 
+        <h2 class="clienteH2">Sucursales</h2>  
+        <h3>Datos del Sucursal</h3> 
         <div class="formulario1">
           <div id="seccionUno">
             <div class="elementosInternos">
-              <label for="NoIdentificacion">Nit *</label>
+              <label for="NoIdentificacion">Nombre de la sucursal *</label>
               <input type="text" name="NoIdentificacion" id="NoIdentificacion" class="tamanioDos">
             </div>
             <div class="elementosInternos">
-              <label for="RazonSocial">Nombre del proveedor *</label>
+              <label for="RazonSocial">Direccion *</label>
               <input type="text" name="RazonSocial" id="RazonSocial" class="tamanioUno">
             </div>
             <div class="elementosInternos">
-              <label for="RazonSocial">Nombre del encargado *</label>
+              <label for="RazonSocial">Ciudad *</label>
               <input type="text" name="RazonSocial" id="RazonSocial" class="tamanioUno">
             </div>
           </div>
           
           <div id="seccionDos">
             <div class="elementosInternos">
+              <label for="Direccion">Nombre del encargado *</label>
+              <input type="text" name="Direccion" id="Direccion" class="tamanioUno">
+            </div>
+            <div class="elementosInternos">
               <label for="Telefono1">Telefono *</label>
               <input type="text" name="Telefono1" id="Telefono1" class="tamanioDos">
-            </div>
-            <div class="elementosInternos">
-              <label for="Direccion">Direccion *</label>
-              <input type="text" name="Direccion" id="Direccion" class="tamanioUno">
-            </div>
-            <div class="elementosInternos">
-              <label for="Direccion">Correo electronico </label>
-              <input type="text" name="Direccion" id="Direccion" class="tamanioUno">
             </div>
           </div>
 
         </div>
         <div class="botones">
-          <input type="submit" value="Crear Proveedor" class="boton">
+          <input type="submit" value="Crear Sucursal" class="boton">
         </div>
       </form>
       <!-- GRILLA -->
       <div class="grilla">
         <form>
           <fieldset>
-            <input class="buscar" type="search" name="Buscar proveedor" id="" placeholder="Buscar proveedor" autocomplete="transaction-currency"/>
+            <input class="buscar" type="search" name="Buscar sucursal" id="" placeholder="Buscar sucursal" autocomplete="transaction-currency"/>
             <div id="contenedorTabla">
               <table>
                 <thead>
                   <tr>
                     <th class="tablaTamanioTres"><input type="checkbox" name="" id="" disabled></th> 
                     <th class="tablaTamanioTres">Id</th>
-                    <th class="tablaTamanioDos">Nit</th>
-                    <th class="tablaTamanioUno">Nombre del proveedor</th>
-                    <th class="tablaTamanioUno">Nombre del encargado</th>
-                    <th class="tablaTamanioDos">Telefono</td>
+                    <th class="tablaTamanioDos">Cedula</th>
+                    <th class="tablaTamanioUno">Nombre del cliente</th>
                     <th class="tablaTamanioUno">Direccion</th>
+                    <th class="tablaTamanioDos">Telefono</td>
                   </tr>
                 </thead>
                 <tbody>
                   <tr class="cebra">
                     <td class="stickyId"><input type="checkbox" name="" id=""></td> 
                     <td>001</td>
-                    <td>80208614-2</td>
-                    <td>Distribuidora el condor</td>
+                    <td>80208614</td>
                     <td>Andres Cifuentes</td>
-                    <td>3115701088</td>
                     <td>Cra 9 No 7 a 16</td>
+                    <td>3115701088</td>
                   </tr>
                   <tr class="cebra">
                     <td class="stickyId"><input type="checkbox" name="" id=""></td> 
                     <td>002</td>
-                    <td>80208614-2</td>
-                    <td>Distribuidora el condor</td>
+                    <td>80208614</td>
                     <td>Andres Cifuentes</td>
-                    <td>3115701088</td>
                     <td>Cra 9 No 7 a 16</td>
+                    <td>3115701088</td>
                   </tr>
                   <tr class="cebra">
                     <td class="stickyId"><input type="checkbox" name="" id=""></td> 
                     <td>003</td>
-                    <td>80208614-2</td>
-                    <td>Distribuidora el condor</td>
+                    <td>80208614</td>
                     <td>Andres Cifuentes</td>
-                    <td>3115701088</td>
                     <td>Cra 9 No 7 a 16</td>
+                    <td>3115701088</td>
                   </tr>
                   <tr class="cebra">
                     <td class="stickyId"><input type="checkbox" name="" id=""></td> 
                     <td>004</td>
-                    <td>80208614-2</td>
-                    <td>Distribuidora el condor</td>
+                    <td>80208614</td>
                     <td>Andres Cifuentes</td>
-                    <td>3115701088</td>
                     <td>Cra 9 No 7 a 16</td>
+                    <td>3115701088</td>
                   </tr>
                   <tr class="cebra">
                     <td class="stickyId"><input type="checkbox" name="" id=""></td> 
                     <td>005</td>
-                    <td>80208614-2</td>
-                    <td>Distribuidora el condor</td>
+                    <td>80208614</td>
                     <td>Andres Cifuentes</td>
-                    <td>3115701088</td>
                     <td>Cra 9 No 7 a 16</td>
+                    <td>3115701088</td>
                   </tr>
                   <tr class="cebra">
                     <td class="stickyId"><input type="checkbox" name="" id=""></td> 
                     <td>006</td>
-                    <td>80208614-2</td>
-                    <td>Distribuidora el condor</td>
+                    <td>80208614</td>
                     <td>Andres Cifuentes</td>
-                    <td>3115701088</td>
                     <td>Cra 9 No 7 a 16</td>
+                    <td>3115701088</td>
                   </tr>
                   <tr class="cebra">
                     <td class="stickyId"><input type="checkbox" name="" id=""></td> 
                     <td>007</td>
-                    <td>80208614-2</td>
-                    <td>Distribuidora el condor</td>
+                    <td>80208614</td>
                     <td>Andres Cifuentes</td>
-                    <td>3115701088</td>
                     <td>Cra 9 No 7 a 16</td>
+                    <td>3115701088</td>
                   </tr>
                   <tr class="cebra">
                     <td class="stickyId"><input type="checkbox" name="" id=""></td> 
                     <td>008</td>
-                    <td>80208614-2</td>
-                    <td>Distribuidora el condor</td>
+                    <td>80208614</td>
                     <td>Andres Cifuentes</td>
-                    <td>3115701088</td>
                     <td>Cra 9 No 7 a 16</td>
-                  </tr>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>009</td>
-                    <td>80208614-2</td>
-                    <td>Distribuidora el condor</td>
-                    <td>Andres Cifuentes</td>
                     <td>3115701088</td>
-                    <td>Cra 9 No 7 a 16</td>
-                  </tr>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>010</td>
-                    <td>80208614-2</td>
-                    <td>Distribuidora el condor</td>
-                    <td>Andres Cifuentes</td>
-                    <td>3115701088</td>
-                    <td>Cra 9 No 7 a 16</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <a href="#">
-              <img class="exportar" src="img/proveedor/Eliminar proveedor.jpg" alt="Eliminar proveedor" width="150px">
+              <img class="exportar" src="img/cliente/eliminar cliente.jpg" alt="Eliminar cliente" width="150px">
             </a>
           </fieldset>
         </form>

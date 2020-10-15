@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="es"> 
+
+<?php
+  $conexion = mysqli_connect('localhost', 'root', '', 'sifprueba');
+?>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,7 +37,7 @@
             </div>
             <nav id="nav1">
               <ul>
-                <li><a href="cliente.html">Gestion de clientes</a></li>
+                <li><a href="cliente.php">Gestion de clientes</a></li>
                 <li><a href="factura de venta.php">Factura de venta</a></li>
                 <li><a href="listado de facturas.php">Listado de facturas</a></li>
                 <li><a href="facturas en cola.html">Facturas en cola</a></li>
@@ -44,7 +48,7 @@
         <input type="text" name="" id="linea">
       </div>
       <!-- CREAR CLIENTE -->
-      <form action="" class="formCliente">
+      <form action="conex/crearCliente.php" class="formCliente" method="post">
         <h2 class="clienteH2">Clientes</h2>  
         <h3>Datos del Cliente</h3> 
         <div class="formulario1">
@@ -72,7 +76,7 @@
 
         </div>
         <div class="botones">
-          <input type="submit" value="Crear Cliente" class="boton">
+          <input type="submit" value="Crear Cliente" class="boton" name="CrearCliente">
         </div>
       </form>
       <!-- GRILLA -->
@@ -85,7 +89,6 @@
                 <thead>
                   <tr>
                     <th class="tablaTamanioTres"><input type="checkbox" name="" id="" disabled></th> 
-                    <th class="tablaTamanioTres">Id</th>
                     <th class="tablaTamanioDos">Cedula</th>
                     <th class="tablaTamanioUno">Nombre del cliente</th>
                     <th class="tablaTamanioUno">Direccion</th>
@@ -93,70 +96,25 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>001</td>
-                    <td>80208614</td>
-                    <td>Andres Cifuentes</td>
-                    <td>Cra 9 No 7 a 16</td>
-                    <td>3115701088</td>
-                  </tr>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>002</td>
-                    <td>80208614</td>
-                    <td>Andres Cifuentes</td>
-                    <td>Cra 9 No 7 a 16</td>
-                    <td>3115701088</td>
-                  </tr>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>003</td>
-                    <td>80208614</td>
-                    <td>Andres Cifuentes</td>
-                    <td>Cra 9 No 7 a 16</td>
-                    <td>3115701088</td>
-                  </tr>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>004</td>
-                    <td>80208614</td>
-                    <td>Andres Cifuentes</td>
-                    <td>Cra 9 No 7 a 16</td>
-                    <td>3115701088</td>
-                  </tr>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>005</td>
-                    <td>80208614</td>
-                    <td>Andres Cifuentes</td>
-                    <td>Cra 9 No 7 a 16</td>
-                    <td>3115701088</td>
-                  </tr>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>006</td>
-                    <td>80208614</td>
-                    <td>Andres Cifuentes</td>
-                    <td>Cra 9 No 7 a 16</td>
-                    <td>3115701088</td>
-                  </tr>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>007</td>
-                    <td>80208614</td>
-                    <td>Andres Cifuentes</td>
-                    <td>Cra 9 No 7 a 16</td>
-                    <td>3115701088</td>
-                  </tr>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>008</td>
-                    <td>80208614</td>
-                    <td>Andres Cifuentes</td>
-                    <td>Cra 9 No 7 a 16</td>
-                    <td>3115701088</td>
-                  </tr>
+
+                  <?php
+                    $consultaClientes = "SELECT * FROM tbcliente";
+                    $resultado = mysqli_query($conexion, $consultaClientes);
+
+                    while ($fila = mysqli_fetch_array($resultado)) {
+
+                      ?>
+                        <tr class="cebra">
+                          <td class="stickyId"><input type="checkbox" name="" id=""></td>
+                          <td><?php echo $fila["CedulaCliente"]; ?></td>
+                          <td><?php echo $fila["NombreCliente"]; ?></td>
+                          <td><?php echo $fila["DireccionCliente"]; ?></td>
+                          <td><?php echo $fila["TelefonoCliente"]; ?></td>
+                        </tr>
+                      <?php
+                    }
+                  ?>
+                  
                 </tbody>
               </table>
             </div>

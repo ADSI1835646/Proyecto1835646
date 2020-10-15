@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="es"> 
+
+<?php
+  $conexion = mysqli_connect('localhost', 'root', '', 'sifprueba');
+?>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,7 +37,7 @@
             </div>
             <nav id="nav1">
               <ul>
-                <li><a href="inventario.html">Gestion de Inventario</a></li>
+                <li><a href="inventario.php">Gestion de Inventario</a></li>
                 <li><a href="proveedor.html">Gestion de proveedores</a></li>
                 <li><a href="factura de compra.html">Factura de compra</a></li>
                 <li><a href="alertas.html">Alertas</a></li>
@@ -68,10 +72,7 @@
               <label for="Telefono1">Precio Unitario *</label>
               <input type="text" name="Telefono1" id="Telefono1" class="tamanioDos">
             </div>
-            <div class="elementosInternos">
-              <label for="Direccion">Margen de utilidad *</label>
-              <input type="text" name="Direccion" id="Direccion" class="tamanioDos">
-            </div>
+            
             <div class="elementosInternos">
               <label for="Direccion">Stock minimo </label>
               <input type="text" name="Direccion" id="Direccion" class="tamanioDos">
@@ -97,12 +98,42 @@
                     <th class="tablaTamanioUno">Nombre del articulo</th>
                     <th class="tablaTamanioUno">Descripcion</th>
                     <th class="tablaTamanioDos">Precio Unitario</th>
-                    <th class="tablaTamanioDos">Margen de utilidad</td>
                     <th class="tablaTamanioDos">Stock minimo</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="cebra">
+
+                  <?php
+                    $consultaArticulos = "SELECT * FROM tbarticulos where NITEmpresa = '112233445-7'";
+                    $ejecucion = mysqli_query($conexion, $consultaArticulos);
+                    
+                    while ($fila = mysqli_fetch_array($ejecucion)) {
+                      $stock = '';
+                      $precio = '';
+                      $consultaInventario = "SELECT * from tbinventario where NITEmpresa = '112233445-7'";
+                      $ejecucion2 = mysqli_query($conexion, $consultaInventario);
+                      while($fila2 = mysqli_fetch_array($ejecucion2)) {
+                        if($fila["ID"] == $fila2["IDArticulo"]) {
+                          $stock = $fila2["StockMin"];
+                          $precio = $fila2["Precio"];
+                        }
+                      }
+
+                      ?>  
+                        <tr class="cebra">
+                          <td class="stickyId"><input type="checkbox" name="" id=""></td>
+                          <td><?php echo $fila["Referencia"];?></td>
+                          <td><?php echo $fila["Nombre"];?></td>
+                          <td><?php echo $fila["Descripcion"];?></td>
+                          <td><?php echo $precio;?></td>
+                          <td><?php echo $stock?></td>
+                        </tr>
+                      <?php
+
+                    }
+                  ?>
+
+                  <!-- <tr class="cebra">
                     <td class="stickyId"><input type="checkbox" name="" id=""></td> 
                     <td>p2045</td>
                     <td>Pan Bimbo integral</td>
@@ -236,7 +267,7 @@
                     <td>1600</td>
                     <td>12%</td>
                     <td>200</td>
-                  </tr>
+                  </tr> -->
                 </tbody>
               </table>
             </div>

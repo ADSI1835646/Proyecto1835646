@@ -10,17 +10,16 @@ function agregarProducto() {
   
   datos.innerHTML = datos.innerHTML +
   `<tr class="azul">
-  <td>${cont++}</td>
-  <td><input type="hidden" name="articulo[]" value="${articulo.value}"/>${articulo.value}</td>
-  <td><input type="hidden" name="cantidadArticulo[]" value="${cantidad.value}"/>${cantidad.value}</td>
-  <td><input type="hidden" name="precioArticulo[]" value="${precio.value}"/>${precio.value}</td>
-  <input type="hidden" name="subtotalArticulo[]" value="${subtotal}"/>
+  <td><input type="hidden" name="incremental[]" value="${incremental}">${cont++}</td>
+  <td>${articulo.value}</td>
+  <td>${cantidad.value}</td>
+  <td>${precio.value}</td>
   <td name="subtotal">${subtotal}</td>
   <td><a href="#" onclick="eliminarArticulo(this)"><img src="img/general/trash.png" alt="Boton eliminar" id="eliminar"></a></td>
   </tr>`;
 
   calcularTotales();
-  limpiarCampos();
+  // limpiarCampos();
 }
 
 function calcularTotales() {

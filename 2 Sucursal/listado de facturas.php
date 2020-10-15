@@ -36,7 +36,7 @@
             </div>
             <nav id="nav1">
               <ul>
-                <li><a href="cliente.html">Gestion de clientes</a></li>
+                <li><a href="cliente.php">Gestion de clientes</a></li>
                 <li><a href="factura de venta.php">Factura de venta</a></li>
                 <li><a href="listado de facturas.php">Revisar facturas</a></li>
                 <li><a href="facturas en cola.html">Facturas en cola</a></li>
@@ -107,106 +107,6 @@
                     }
 
                   ?>
-                  <!-- <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>001</td>
-                    <td>Ricardo Andres Cifuentes</td>
-                    <td>15/Oct/2020</td>
-                    <td>150000</td>
-                    <td>530.000</td>
-                    <td>30000</td>
-                    <td>560000</td>
-                  </tr>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>002</td>
-                    <td>Ricardo Andres Cifuentes</td>
-                    <td>15/Oct/2020</td>
-                    <td>150000</td>
-                    <td>530.000</td>
-                    <td>30000</td>
-                    <td>560000</td>
-                  </tr>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>003</td>
-                    <td>Ricardo Andres Cifuentes</td>
-                    <td>15/Oct/2020</td>
-                    <td>150000</td>
-                    <td>530.000</td>
-                    <td>30000</td>
-                    <td>560000</td>
-                  </tr>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>004</td>
-                    <td>Ricardo Andres Cifuentes</td>
-                    <td>15/Oct/2020</td>
-                    <td>150000</td>
-                    <td>530.000</td>
-                    <td>30000</td>
-                    <td>560000</td>
-                  </tr>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>005</td>
-                    <td>Ricardo Andres Cifuentes</td>
-                    <td>15/Oct/2020</td>
-                    <td>150000</td>
-                    <td>530.000</td>
-                    <td>30000</td>
-                    <td>560000</td>
-                  </tr>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>006</td>
-                    <td>Ricardo Andres Cifuentes</td>
-                    <td>15/Oct/2020</td>
-                    <td>150000</td>
-                    <td>530.000</td>
-                    <td>30000</td>
-                    <td>560000</td>
-                  </tr>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>007</td>
-                    <td>Ricardo Andres Cifuentes</td>
-                    <td>15/Oct/2020</td>
-                    <td>150000</td>
-                    <td>530.000</td>
-                    <td>30000</td>
-                    <td>560000</td>
-                  </tr>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>008</td>
-                    <td>Ricardo Andres Cifuentes</td>
-                    <td>15/Oct/2020</td>
-                    <td>150000</td>
-                    <td>530.000</td>
-                    <td>30000</td>
-                    <td>560000</td>
-                  </tr>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>009</td>
-                    <td>Ricardo Andres Cifuentes</td>
-                    <td>15/Oct/2020</td>
-                    <td>150000</td>
-                    <td>530.000</td>
-                    <td>30000</td>
-                    <td>560000</td>
-                  </tr>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>010</td>
-                    <td>Ricardo Andres Cifuentes</td>
-                    <td>15/Oct/2020</td>
-                    <td>150000</td>
-                    <td>530.000</td>
-                    <td>30000</td>
-                    <td>560000</td>
-                  </tr> -->
                 </tbody>
               </table>
             </div>

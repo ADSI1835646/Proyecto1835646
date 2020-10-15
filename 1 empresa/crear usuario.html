@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proveedor</title>
+    <title>Crear Usuario</title>
     <link rel="icon" type="image" href="img/general/favicon.png">
-    <link rel="stylesheet" href="css/proveedor.css">
+    <link rel="stylesheet" href="css/crear usuario.css">
   </head>
   <body>
     <div class="contenedor">
@@ -25,7 +25,7 @@
                   <figure id="figAvatar">
                     <img id="avatar" src="img/general/avatar.png" alt="avatar" />
                   </figure>
-                  <p>Bodega</p>
+                  <p>Empresa</p>
                   <a href="../0 inicio de sesion/index.html">
                   <input type="button" value="Cerrar sesion"></a>
                 </div>
@@ -33,10 +33,10 @@
             </div>
             <nav id="nav1">
               <ul>
-                <li><a href="inventario.php">Gestion de Inventario</a></li>
-                <li><a href="proveedor.html">Gestion de proveedores</a></li>
-                <li><a href="factura de compra.html">Factura de compra</a></li>
-                <li><a href="alertas.html">Alertas</a></li>
+                <li><a href="crear usuario.html">Crear Usuarios</a></li>
+                <li><a href="crear sucursal.html">Crea Sucursales</a></li>
+                <li><a href="crear bodegas.html">Crear Bodegas</a></li>
+                <li><a href="crear sucursal-bodegas.html">Asignar Bodegas</a></li>
               </ul>
             </nav>
           </div>
@@ -45,158 +45,169 @@
       </div>
       <!-- CREAR CLIENTE -->
       <form action="" class="formCliente">
-        <h2 class="clienteH2">Proveedor</h2>  
-        <h3>Datos del Proveedor</h3> 
+        <h2 class="clienteH2">Usuarios</h2>  
+        <h3>Datos del Usuario</h3> 
         <div class="formulario1">
           <div id="seccionUno">
             <div class="elementosInternos">
-              <label for="NoIdentificacion">Nit *</label>
+              <label for="NoIdentificacion">Cedula *</label>
               <input type="text" name="NoIdentificacion" id="NoIdentificacion" class="tamanioDos">
             </div>
             <div class="elementosInternos">
-              <label for="RazonSocial">Nombre del proveedor *</label>
+              <label for="NoIdentificacion">Nombre del encargado *</label>
+              <input type="text" name="NoIdentificacion" id="NoIdentificacion" class="tamanioUno">
+            </div>
+            <div class="elementosInternos">
+              <label for="RazonSocial">Direccion *</label>
               <input type="text" name="RazonSocial" id="RazonSocial" class="tamanioUno">
             </div>
             <div class="elementosInternos">
-              <label for="RazonSocial">Nombre del encargado *</label>
-              <input type="text" name="RazonSocial" id="RazonSocial" class="tamanioUno">
+              <label for="RazonSocial">Ciudad *</label>
+              <input type="text" name="RazonSocial" id="RazonSocial" class="tamanioDos">
+            </div>
+            <div class="elementosInternos">
+              <label for="Telefono1">Telefono *</label>
+              <input type="text" name="Telefono1" id="Telefono1" class="tamanioDos">
             </div>
           </div>
           
           <div id="seccionDos">
             <div class="elementosInternos">
-              <label for="Telefono1">Telefono *</label>
-              <input type="text" name="Telefono1" id="Telefono1" class="tamanioDos">
-            </div>
-            <div class="elementosInternos">
-              <label for="Direccion">Direccion *</label>
+              <label for="Direccion">Nombre del usuario *</label>
               <input type="text" name="Direccion" id="Direccion" class="tamanioUno">
             </div>
             <div class="elementosInternos">
-              <label for="Direccion">Correo electronico </label>
-              <input type="text" name="Direccion" id="Direccion" class="tamanioUno">
+              <label for="Direccion">Ingrese contraseña *</label>
+              <input type="text" name="Direccion" id="Direccion" class="tamanioDos">
+            </div>
+            <div class="elementosInternos">
+              <label for="Direccion">Confirme contraseña *</label>
+              <input type="text" name="Direccion" id="Direccion" class="tamanioDos">
+            </div>
+            <div class="elementosInternos">
+              <label for="Direccion">Sucursal *</label>
+              <input type="text" name="Direccion" id="Direccion" class="tamanioDos">
             </div>
           </div>
 
         </div>
         <div class="botones">
-          <input type="submit" value="Crear Proveedor" class="boton">
+          <input type="submit" value="Crear Usuario" class="boton">
         </div>
       </form>
       <!-- GRILLA -->
       <div class="grilla">
         <form>
           <fieldset>
-            <input class="buscar" type="search" name="Buscar proveedor" id="" placeholder="Buscar proveedor" autocomplete="transaction-currency"/>
+            <input class="buscar" type="search" name="Buscar usuario" id="" placeholder="Buscar usuario" autocomplete="transaction-currency"/>
             <div id="contenedorTabla">
               <table>
                 <thead>
                   <tr>
                     <th class="tablaTamanioTres"><input type="checkbox" name="" id="" disabled></th> 
-                    <th class="tablaTamanioTres">Id</th>
-                    <th class="tablaTamanioDos">Nit</th>
-                    <th class="tablaTamanioUno">Nombre del proveedor</th>
+                    <th class="tablaTamanioDos">Nombre de usuario</td>
+                    <th class="tablaTamanioDos">Sucursal</td>
                     <th class="tablaTamanioUno">Nombre del encargado</th>
-                    <th class="tablaTamanioDos">Telefono</td>
+                    <th class="tablaTamanioDos">Cedula</th>
                     <th class="tablaTamanioUno">Direccion</th>
+                    <th class="tablaTamanioDos">Ciudad</th>
+                    <th class="tablaTamanioDos">Telefono</td>
                   </tr>
                 </thead>
                 <tbody>
                   <tr class="cebra">
                     <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>001</td>
-                    <td>80208614-2</td>
-                    <td>Distribuidora el condor</td>
-                    <td>Andres Cifuentes</td>
+                    <td>Usuario_001</td>
+                    <td>Sucursal_001</td>
+                    <td>Andres Cifuentes Perez</td>
+                    <td>80208614</td>
+                    <td>Cra 29 No 47 a 16</td>
+                    <td>Fusagasuga</td>
                     <td>3115701088</td>
-                    <td>Cra 9 No 7 a 16</td>
                   </tr>
                   <tr class="cebra">
                     <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>002</td>
-                    <td>80208614-2</td>
-                    <td>Distribuidora el condor</td>
-                    <td>Andres Cifuentes</td>
-                    <td>3115701088</td>
-                    <td>Cra 9 No 7 a 16</td>
+                    <td>Usuario_002</td>
+                    <td>Sucursal_002</td>
+                    <td>Sebastian Rubiano </td>
+                    <td>1069712080</td>
+                    <td>Cra 19 No 7 a 66</td>
+                    <td>Pasca</td>
+                    <td>3135702466</td>
                   </tr>
                   <tr class="cebra">
                     <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>003</td>
-                    <td>80208614-2</td>
-                    <td>Distribuidora el condor</td>
-                    <td>Andres Cifuentes</td>
-                    <td>3115701088</td>
-                    <td>Cra 9 No 7 a 16</td>
+                    <td>Usuario_003</td>
+                    <td>Sucursal_003</td>
+                    <td>Jefferson Garcia Barrios</td>
+                    <td>1069712080</td>
+                    <td>Cra 19 No 7 a 66</td>
+                    <td>Silvania</td>
+                    <td>3135702466</td>
                   </tr>
                   <tr class="cebra">
                     <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>004</td>
-                    <td>80208614-2</td>
-                    <td>Distribuidora el condor</td>
-                    <td>Andres Cifuentes</td>
+                    <td>Usuario_004</td>
+                    <td>Sucursal_004</td>
+                    <td>Ricardo Cifuentes</td>
+                    <td>80208614</td>
+                    <td>Cra 29 No 47 a 16</td>
+                    <td>Arbelaez</td>
                     <td>3115701088</td>
-                    <td>Cra 9 No 7 a 16</td>
                   </tr>
                   <tr class="cebra">
                     <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>005</td>
-                    <td>80208614-2</td>
-                    <td>Distribuidora el condor</td>
-                    <td>Andres Cifuentes</td>
-                    <td>3115701088</td>
-                    <td>Cra 9 No 7 a 16</td>
+                    <td>Usuario_005</td>
+                    <td>Sucursal_005</td>
+                    <td>Luis Rubiano </td>
+                    <td>1069712080</td>
+                    <td>Cra 19 No 7 a 66</td>
+                    <td>Pasca</td>
+                    <td>3135702466</td>
                   </tr>
                   <tr class="cebra">
                     <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>006</td>
-                    <td>80208614-2</td>
-                    <td>Distribuidora el condor</td>
-                    <td>Andres Cifuentes</td>
+                    <td>Usuario_006</td>
+                    <td>Sucursal_006</td>
+                    <td>Jefferson Garcia Barrios</td>
+                    <td>1069712080</td>
+                    <td>Cra 19 No 7 a 66</td>
+                    <td>Pasca</td>
+                    <td>3135702466</td>
+                  <tr class="cebra">
+                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
+                    <td>Usuario_007</td>
+                    <td>Sucursal_007</td>
+                    <td>Ricardo Cifuentes</td>
+                    <td>80208614</td>
+                    <td>Cra 29 No 47 a 16</td>
+                    <td>Arbelaez</td>
                     <td>3115701088</td>
-                    <td>Cra 9 No 7 a 16</td>
                   </tr>
                   <tr class="cebra">
                     <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>007</td>
-                    <td>80208614-2</td>
-                    <td>Distribuidora el condor</td>
-                    <td>Andres Cifuentes</td>
-                    <td>3115701088</td>
-                    <td>Cra 9 No 7 a 16</td>
+                    <td>Usuario_008</td>
+                    <td>Sucursal_008</td>
+                    <td>Luis Rubiano </td>
+                    <td>1069712080</td>
+                    <td>Cra 19 No 7 a 66</td>
+                    <td>Pasca</td>
+                    <td>3135702466</td>
                   </tr>
                   <tr class="cebra">
                     <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>008</td>
-                    <td>80208614-2</td>
-                    <td>Distribuidora el condor</td>
-                    <td>Andres Cifuentes</td>
-                    <td>3115701088</td>
-                    <td>Cra 9 No 7 a 16</td>
+                    <td>Usuario_009</td>
+                    <td>Sucursal_009</td>
+                    <td>Jefferson Garcia Barrios</td>
+                    <td>1069712080</td>
+                    <td>Cra 19 No 7 a 66</td>
+                    <td>Pasca</td>
+                    <td>3135702466</td>
                   </tr>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>009</td>
-                    <td>80208614-2</td>
-                    <td>Distribuidora el condor</td>
-                    <td>Andres Cifuentes</td>
-                    <td>3115701088</td>
-                    <td>Cra 9 No 7 a 16</td>
-                  </tr>
-                  <tr class="cebra">
-                    <td class="stickyId"><input type="checkbox" name="" id=""></td> 
-                    <td>010</td>
-                    <td>80208614-2</td>
-                    <td>Distribuidora el condor</td>
-                    <td>Andres Cifuentes</td>
-                    <td>3115701088</td>
-                    <td>Cra 9 No 7 a 16</td>
-                  </tr>
-                </tbody>
               </table>
             </div>
             <a href="#">
-              <img class="exportar" src="img/proveedor/Eliminar proveedor.jpg" alt="Eliminar proveedor" width="150px">
+              <img class="exportar" src="img/cliente/eliminar cliente.jpg" alt="Eliminar usuario" width="150px">
             </a>
           </fieldset>
         </form>

@@ -18,22 +18,67 @@
         <article class="fondo">
           <img src="img/sif.png" alt="img sif" id="logo">
           <h3>Bienvenido a Sif</h3>
-          <h4>Empresa - Sucursal - Bodega</h3>
-          <form action="modulos/modulo gestion de usuario/gestion de usuarios.html" onsubmit="return validacion_inicio_sesion()">
-            <div id="usuarioInp">
-              <img src="img/user.png" alt="icono usuario" id="iconoUsuario">
-              <input id="campo1" class="inp" type="text" name="user" value=""><br>
-            </div>
-            <div id="passInp">
-              <img src="img/pass.png" alt="icono pass" id="iconoPass">
-              <input id="campo2" class="inp" type="password" name="pass" value="" ><br>
-            </div>
-            <div>
-              <a href="#" class="he" >He olvidado mi contraseña</a>
-            </div>
-            <button type="submit" class="boton" name="inicio" value="Iniciar Sesión">Iniciar Sesión</button>
-            <!-- <input class="boton" type="submit" name="inicio" value="Iniciar Sesión" > -->
-          </form>
+          <div id="header">
+            <ul class="nav">
+              <li><a href="">Empresa</a>
+                <ul>
+                  <form action="" onsubmit="return validacion_inicio_sesion()">
+                    <div id="usuarioInp">
+                      <img src="img/user.png" alt="icono usuario" id="iconoUsuario">
+                      <input id="campo1" class="inp" type="text" name="user" value=""><br>
+                    </div>
+                    <div id="passInp">
+                      <img src="img/pass.png" alt="icono pass" id="iconoPass">
+                      <input id="campo2" class="inp" type="password" name="pass" value="" ><br>
+                    </div>
+                    <div>
+                      <a href="#" class="he" style="margin: auto; display: block; width: 70%; border-radius: 5px;" >He olvidado mi contraseña</a>
+                    </div>
+                    <a href="../1 empresa/crear usuario.html"><button type="submit" class="boton" name="inicio" value="Iniciar Sesión">Iniciar Sesión</button></a>
+                    <!-- <input class="boton" type="submit" name="inicio" value="Iniciar Sesión" > -->
+                  </form>
+                </ul>
+              </li>
+              <li><a href="">Sucursal</a>
+                <ul>
+                  <form action="" onsubmit="return validacion_inicio_sesion()">
+                    <div id="usuarioInp">
+                      <img src="img/user.png" alt="icono usuario" id="iconoUsuario">
+                      <input id="campo1" class="inp" type="text" name="user" value=""><br>
+                    </div>
+                    <div id="passInp">
+                      <img src="img/pass.png" alt="icono pass" id="iconoPass">
+                      <input id="campo2" class="inp" type="password" name="pass" value="" ><br>
+                    </div>
+                    <div>
+                      <a href="#" class="he" style="margin: auto; display: block; width: 70%; border-radius: 5px;">He olvidado mi contraseña</a>
+                    </div>
+                    <a href="../2 Sucursal/listado de facturas.php"><button type="submit" class="boton" name="inicio" value="Iniciar Sesión">Iniciar Sesión</button></a>
+                    <!-- <input class="boton" type="submit" name="inicio" value="Iniciar Sesión" > -->
+                  </form>
+                </ul>
+              </li>
+              <li><a href="">Bodega</a>
+                <ul>
+                  <form action="" onsubmit="return validacion_inicio_sesion()">
+                    <div id="usuarioInp">
+                      <img src="img/user.png" alt="icono usuario" id="iconoUsuario">
+                      <input id="campo1" class="inp" type="text" name="user" value=""><br>
+                    </div>
+                    <div id="passInp">
+                      <img src="img/pass.png" alt="icono pass" id="iconoPass">
+                      <input id="campo2" class="inp" type="password" name="pass" value="" ><br>
+                    </div>
+                    <div>
+                    <a href="#" class="he" style="margin: auto; display: block; width: 70%; border-radius: 5px;">He olvidado mi contraseña</a>
+                      </div>
+                      <a href="../3 bodega/inventario.php"><button type="submit" class="boton" name="inicio" value="Iniciar Sesión">Iniciar Sesión</button></a>
+                      <!-- <input class="boton" type="submit" name="inicio" value="Iniciar Sesión" > -->
+                    </form>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </article>
       </div>
     </div>
