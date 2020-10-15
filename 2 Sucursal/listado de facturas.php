@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="es"> 
+  <?php
+    $conexion = mysqli_connect('localhost', 'root', '', 'sifprueba');
+  ?>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,8 +37,8 @@
             <nav id="nav1">
               <ul>
                 <li><a href="cliente.html">Gestion de clientes</a></li>
-                <li><a href="factura de venta.html">Factura de venta</a></li>
-                <li><a href="listado de facturas.html">Revisar facturas</a></li>
+                <li><a href="factura de venta.php">Factura de venta</a></li>
+                <li><a href="listado de facturas.php">Revisar facturas</a></li>
                 <li><a href="facturas en cola.html">Facturas en cola</a></li>
               </ul>
             </nav>
@@ -64,7 +67,47 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="cebra">
+                  <?php
+                    $consultaTbFacturas = "SELECT * from tbfacturaventas where NITEmpresa = '112233445-7'";
+                    $resultado = mysqli_query($conexion, $consultaTbFacturas);
+                    
+                    while($fila = mysqli_fetch_array($resultado)){
+                      $idFactura = $fila["ID"];
+                      $nombreCliente = '';
+
+                      $consultaTbClientes = "SELECT * from tbcliente where NITEmpresa = '112233445-7'";
+                      $resultadoClientes = mysqli_query($conexion, $consultaTbClientes);
+
+                      while($fila2 = mysqli_fetch_array($resultadoClientes)){
+                        if ($fila2["CedulaCliente"] == $fila["CedulaCliente"]) {
+                          $nombreCliente = $fila2["NombreCliente"];
+                        }
+                      }
+                      $fecha = $fila["FECHA"];
+                      $descuento = $fila["Descuento"];
+                      $subtotal = $fila["Subtotal"];
+                      $iva = $fila["IVA"];
+                      $total = $fila["Total"];
+
+                      ?>
+
+                      <tr class="cebra">
+                      <td class="stickyId"><input type="checkbox" name="" id=""></td> 
+                      <td><?php echo $idFactura; ?></td>
+                      <td><?php echo $nombreCliente; ?></td>
+                      <td><?php echo $fecha; ?></td>
+                      <td><?php echo $descuento; ?></td>
+                      <td><?php echo $subtotal; ?></td>
+                      <td><?php echo $iva; ?></td>
+                      <td><?php echo $total; ?></td>
+                      </tr>
+
+                      <?php
+
+                    }
+
+                  ?>
+                  <!-- <tr class="cebra">
                     <td class="stickyId"><input type="checkbox" name="" id=""></td> 
                     <td>001</td>
                     <td>Ricardo Andres Cifuentes</td>
@@ -163,7 +206,7 @@
                     <td>530.000</td>
                     <td>30000</td>
                     <td>560000</td>
-                  </tr>
+                  </tr> -->
                 </tbody>
               </table>
             </div>

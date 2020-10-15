@@ -1,5 +1,5 @@
 <?php
-  $conexion = mysqli_connect('localhost', 'root', '', 'sifprueba');
+  include 'conex.php';
   if (isset($_POST["crearFactura"])) {
     //tomar datos de cliente
     $idFactura = $_POST["idConsecutivo"];
@@ -51,9 +51,9 @@
     }
 
     for ($i=0; $i < count($articulo); $i++) { 
-      $insercionFacArt = "INSERT into tbfacturaventasarticulos values ('$idFactura', '$articulo[$i]', '$cantidad[$i]', '$precioUnit[$i]', '$subtotalArt[$i]')";
+      $insercionFacArt = "INSERT into tbfacturaventasarticulos values ('$idFactura', '$articulo[$i]', '$cantidad[$i]', '$precioUnit[$i]', '$subtotalArt[$i]', '112233445-7')";
 
-      $ejecutar = mysqli_query($conexion, $insercionFacArt);
+      $ejecutar = mysqli_query($conexion, $insercionFacArt) or die ("Error en la inserción de datos");
       if (!$ejecutar) {
         echo "<script>
           alert('Insercion de articulos fallida');
@@ -63,7 +63,7 @@
 
     echo "<script>
       alert('Operacion realizada con exito');
-      window.open('../form factura de venta.php', '_self');
+      window.open('../listado de facturas.php', '_self');
     </script>";
 
 
