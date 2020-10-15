@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="icon" type="image" href="img/favicon.png">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Montez|Pathway+Gothic+One" rel="stylesheet">
+  </head>
+  <body>
+    <div class="contenedor">
+
+      <header>
+        <h1 class="title">Sif</h1>
+      </header>
+      <div class="login">
+        <article class="fondo">
+          <img src="img/sif.png" alt="img sif" id="logo">
+          <h3>Bienvenido a Sif</h3>
+          <h4>Empresa - Sucursal - Bodega</h3>
+          <form action="modulos/modulo gestion de usuario/gestion de usuarios.html" onsubmit="return validacion_inicio_sesion()">
+            <div id="usuarioInp">
+              <img src="img/user.png" alt="icono usuario" id="iconoUsuario">
+              <input id="campo1" class="inp" type="text" name="user" value=""><br>
+            </div>
+            <div id="passInp">
+              <img src="img/pass.png" alt="icono pass" id="iconoPass">
+              <input id="campo2" class="inp" type="password" name="pass" value="" ><br>
+            </div>
+            <div>
+              <a href="#" class="he" >He olvidado mi contraseña</a>
+            </div>
+            <button type="submit" class="boton" name="inicio" value="Iniciar Sesión">Iniciar Sesión</button>
+            <!-- <input class="boton" type="submit" name="inicio" value="Iniciar Sesión" > -->
+          </form>
+        </article>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
